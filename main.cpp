@@ -1,5 +1,8 @@
-#include "MyVector.h"
+#include "MyUnsortedVector.h"
 
 int main() {
-  MyVector<int> vec;
+  MyUnsortedVector<int> vec;
+  vec.print();
+  vec.add(7);
+  vec.print();
 }

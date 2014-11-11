@@ -6,16 +6,16 @@
 template<class T>
 class MyVector : public MyContainer<T> 
 {
-private:
-  static const int CAPACITY = 100;
-  T items[CAPACITY];
 protected:
   int numItems;
+  static const int CAPACITY = 100;
+  T items[CAPACITY];
 public:
-  MyVector();
-  bool contains(T anItem) const;
-  void add(T newItem);
-  void remove(T newItem);
+  bool isFull() const;
+  virtual bool contains(T anItem) const = 0;
+  virtual void add(T newItem) = 0;
+  virtual void remove(T newItem) = 0; 
+  void print() const;
 };
 
 #include "MyVector.cpp"

@@ -12,6 +12,7 @@ public:
   virtual bool contains(T anItem) const = 0;
   virtual void add(T newItem) = 0;
   virtual void remove(T newItem) = 0; 
+  virtual void print() const = 0;
 };
 
 #include "MyContainer.cpp"

@@ -1,57 +1,20 @@
 #include "MyVector.h"
 
-template<class T>
-MyVector<T>::MyVector() : numItems(0)
-{  
-} 
+#include <iostream>
 
 template<class T>
-bool MyVector<T>::contains(T anItem) const 
+bool MyVector<T>::isFull() const
 {
+  return numItems == CAPACITY;
+}
+
+template<class T>
+void MyVector<T>::print() const
+{
+  std::cout << "Vector (" << numItems << "):";
   for (int i=0; i<numItems; ++i)
   {
-    if (items[i] == anItem) 
-    {
-      return true;
-    }
+    std::cout << " " << items[i];
   }
-  return false;
+  std::cout << "\n";
 }
-
-template<class T>
-void MyVector<T>::add(T newItem) 
-{
-  if (numItems < CAPACITY)
-  {
-    items[numItems] = newItem;
-    numItems++;
-  }
-  else
-  {
-    throw "MyVector capacity reached";
-  }
-}
-
-template<class T>
-void MyVector<T>::remove(T anItem) 
-{
-  bool found {false};
-  for (int i=0; i<numItems; ++i)
-  {
-    if (found) 
-    {
-      items[i-1] = items[i];
-    }
-    else if (items[i] == anItem)
-    {
-      found = true;
-    }
-  }
-  if (found)
-  {
-    numItems--;
-  }
-}
-
-
-
