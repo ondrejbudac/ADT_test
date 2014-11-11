@@ -1,40 +1,46 @@
+#include "MyContainer.h"
 #include "MyUnsortedVector.h"
+#include "MySortedVector.h"
 
 #include <iostream>
 
-void testMyUnsortedVector() {
-  MyUnsortedVector<int> vec;
-  vec.print();
+template<class T>
+void testContainer(MyContainer<T> &con) {
+  con.print();
   
   std::cout << "Adding 7\n";
-  vec.add(7);
-  vec.print();
+  con.add(7);
+  con.print();
 
   std::cout << "Adding 2\n";
-  vec.add(2);
-  vec.print();
+  con.add(2);
+  con.print();
 
   std::cout << "Adding 2\n";
-  vec.add(2);
-  vec.print();
+  con.add(2);
+  con.print();
 
   std::cout << "Adding 3\n";
-  vec.add(3);
-  vec.print();
+  con.add(3);
+  con.print();
   
   std::cout << "Removing 2\n";
-  vec.remove(2);
-  vec.print();
+  con.remove(2);
+  con.print();
 
   std::cout << "Adding 7\n";
-  vec.add(7);
-  vec.print();
+  con.add(7);
+  con.print();
 
   std::cout << "Removing 7\n";
-  vec.remove(7);
-  vec.print();
+  con.remove(7);
+  con.print();
 }
 
 int main() {
-  testMyUnsortedVector();
+  MySortedVector<int> sv;
+  testContainer(sv);
+
+  MySortedVector<int> uv;
+  testContainer(uv);
 }
