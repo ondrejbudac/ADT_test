@@ -7,7 +7,6 @@ template<class T>
 class MyVector : public MyContainer<T> 
 {
 protected:
-  int numItems;
   static const int CAPACITY = 100;
   T items[CAPACITY];
 public:

@@ -7,6 +7,7 @@ class MyContainer
 protected:
   int numItems;
 public:
+  MyContainer();
   bool empty() const;
   int size() const;
   virtual bool contains(T anItem) const = 0;

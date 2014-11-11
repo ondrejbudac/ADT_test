@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-template<class T>
-MyUnsortedVector<T>::MyUnsortedVector() : numItems(0)
-{  
-} 
+//template<class T>
+//MyUnsortedVector<T>::MyUnsortedVector() : numItems(0)
+//{  
+//} 
 
 template<class T>
 bool MyUnsortedVector<T>::contains(T anItem) const 

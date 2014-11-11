@@ -6,10 +6,6 @@
 template<class T>
 class MyUnsortedVector : public MyVector<T> 
 {
-protected:
-  int numItems;
-  static const int CAPACITY = 100;
-  T items[CAPACITY];
 public:
   MyUnsortedVector();
   bool contains(T anItem) const;
