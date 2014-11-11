@@ -7,7 +7,6 @@ template<class T>
 class MyUnsortedVector : public MyVector<T> 
 {
 public:
-  MyUnsortedVector();
   bool contains(T anItem) const;
   void add(T newItem);
   void remove(T newItem); 

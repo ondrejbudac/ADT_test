@@ -1,7 +1,7 @@
 #include "MyContainer.h"
 
 template<class T>
-int MyContainer<T>::MyContainer() : numItems(0)
+MyContainer<T>::MyContainer() : numItems(0)
 {
 }
 

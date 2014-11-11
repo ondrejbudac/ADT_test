@@ -5,14 +5,14 @@
 template<class T>
 bool MyVector<T>::isFull() const
 {
-  return numItems == CAPACITY;
+  return MyContainer<T>::numItems == CAPACITY;
 }
 
 template<class T>
 void MyVector<T>::print() const
 {
-  std::cout << "Vector (" << numItems << "):";
-  for (int i=0; i<numItems; ++i)
+  std::cout << "Vector (" << MyContainer<T>::numItems << "):";
+  for (int i=0; i < MyContainer<T>::numItems; ++i)
   {
     std::cout << " " << items[i];
   }
